@@ -1,0 +1,37 @@
+https://app.quickdatabasediagrams.com/#/
+
+Departments
+-
+dept_no PK VARCHAR FK - Dept_Manager.dept_no
+dept_name VARCHAR
+
+Titles
+-
+title_id PK VARCHAR 
+title VARCHAR
+
+Salaries
+-
+emp_no pk INTEGER FK - Employees.emp_no
+salary INTEGER
+
+Dept_Manager
+-
+dept_no pk VARCHAR
+emp_no INTEGER FK - Employees.emp_no
+
+Employees
+-
+emp_no pk INTEGER FK - Dept_Emp.emp_no
+emp_title VARCHAR FK >- Titles.title_id
+birth_date DATE
+first_name VARCHAR
+last_name VARCHAR
+sex VARCHAR
+hire_date DATE
+
+Dept_Emp
+-
+emp_no pk INTEGER
+dept_no VARCHAR FK >- Departments.dept_no
+
